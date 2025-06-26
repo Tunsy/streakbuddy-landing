@@ -1,8 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Users, Target, Smartphone, Heart, Zap, Star, CalendarDays, ChartColumn } from "lucide-react"
+import { Users, Target, Smartphone, CalendarDays, ChartColumn } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -77,9 +76,9 @@ export default function StreakBuddyLanding() {
             <div className="grid gap-12 items-center">
               <div className="space-y-8 justify-center mx-auto">
                 <div className="space-y-4 max-w-5xl">
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">Tired of habit apps that don't work?</h2>
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">{`Tired of habit apps that don't work?`}</h2>
                   <p className="text-lg text-gray-600 text-center">
-                    It's not your fault. Most productivity solutions weren't built for ADHD. Typical apps assume self-motivation is enough, leaving you to battle dopamine depletion alone, causing you to: 
+                    {`It's not your fault. Most productivity solutions weren't built for ADHD. Typical apps assume self-motivation is enough, leaving you to battle dopamine depletion alone, causing you to:`} 
                   </p>
                 </div>
 
@@ -103,7 +102,7 @@ export default function StreakBuddyLanding() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Feel Overwhelmed</h3>
                       <p className="text-gray-600 w-72">
-                        When your to-do list swirls into chaos and you're drowning in good intentions.
+                        {`When your to-do list swirls into chaos and you're drowning in good intentions.`}
                       </p>
                     </div>
                   </div>
@@ -155,7 +154,7 @@ export default function StreakBuddyLanding() {
               <h3 className="text-2xl font-bold text-gray-900">Introducing</h3>
               <h1 className="inline-block text-7xl pb-4 font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Streak Buddy</h1>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Streak Buddy pairs you with a friend who shares your goal. When you both succeed, your streak grows. When one stumbles, you're there for each other.
+              {`Streak Buddy pairs you with a friend who shares your goal. When you both succeed, your streak grows. When one stumbles, you're there for each other.`}
               </p>
             </div>
 
