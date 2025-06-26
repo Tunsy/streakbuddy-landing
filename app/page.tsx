@@ -12,8 +12,14 @@ export default function StreakBuddyLanding() {
       {/* Header */}
       <header className="px-4 lg:px-6 h-16 flex items-center backdrop-blur-sm bg-white/80 sticky top-0 z-50 border-b border-purple-100">
         <div className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-            <Zap className="h-5 w-5 text-white" />
+            <div className="relative w-8 h-8">
+            <Image
+              src="/logo.png"
+              alt="Streak Buddy"
+              layout="fill"
+              objectFit="contain"
+              priority
+            />
           </div>
           <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
             Streak Buddy
@@ -31,22 +37,22 @@ export default function StreakBuddyLanding() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden debugPurple">
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-pink-600/10 to-orange-600/10 debugPurple" />
-          <div className="container mx-auto px-4 md:px-6 relative debugPurple">
+        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-pink-600/10 to-orange-600/10" />
+          <div className="container mx-auto px-4 md:px-6 relative">
             <div className="flex flex-col items-center space-y-8 text-center">
               <div className="space-y-4 max-w-5xl">
-                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent animate-in slide-in-from-bottom-4 duration-1000">
+                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent">
                   Finally, Build Habits That Stick
                   <br />
                   <span className="text-gray-900">With The Help of a Buddy</span>
                 </h1>
-                <p className="mx-auto max-w-2xl text-lg md:text-xl text-gray-600 animate-in slide-in-from-bottom-4 duration-1000 delay-200">
+                <p className="mx-auto max-w-2xl text-lg md:text-xl text-gray-600">
                   Stay accountable, build streaks together, and turn daily tasks into shared victories. The
                   habit-building app designed specifically for people with ADHD.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 animate-in slide-in-from-bottom-4 duration-1000 delay-400">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Link href="#signup">
                   <Button
                     size="lg"
@@ -57,7 +63,7 @@ export default function StreakBuddyLanding() {
                   </Button>
                 </Link>
               </div>
-              <div className="flex items-center gap-2 text-sm text-gray-500 animate-in slide-in-from-bottom-4 duration-1000 delay-600">
+              <div className="flex items-center gap-2 text-sm text-gray-500">
                 <Smartphone className="h-4 w-4" />
                 <span>Coming to iOS & Android</span>
               </div>
@@ -77,10 +83,10 @@ export default function StreakBuddyLanding() {
                   </p>
                 </div>
 
-                <div className="grid max-w-2xl md:grid-cols-2 gap-x-24 gap-y-8 mb-10  pt-8 mx-auto">
+                <div className="grid max-w-2xl md:grid-cols-2 gap-x-32 gap-y-8 mb-10  pt-8 mx-auto">
                   <div className="flex items-start gap-4">
                     <div className="w-16 h-16 rounded-2xl flex items-center justify-center">
-                      <span className="text-2xl">🤦‍♂️</span>
+                      <span className="text-4xl">🤦‍♂️</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Forget</h3>
@@ -92,7 +98,7 @@ export default function StreakBuddyLanding() {
 
                   <div className="flex items-start gap-4">
                     <div className="w-16 h-16 rounded-2xl flex items-center justify-center">
-                      <span className="text-2xl">😵</span>
+                      <span className="text-4xl">😵</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Feel Overwhelmed</h3>
@@ -104,7 +110,7 @@ export default function StreakBuddyLanding() {
 
                   <div className="flex items-start gap-4">
                     <div className="w-16 h-16 rounded-2xl flex items-center justify-center">
-                      <span className="text-2xl">😔</span>
+                      <span className="text-4xl">😔</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Lose Motivation</h3>
@@ -116,7 +122,7 @@ export default function StreakBuddyLanding() {
 
                   <div className="flex items-start gap-4">
                     <div className="w-16 h-16 rounded-2xl flex items-center justify-center">
-                      <span className="text-2xl">😵‍💫</span>
+                      <span className="text-4xl">😵‍💫</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Be frustrated</h3>
@@ -342,7 +348,7 @@ export default function StreakBuddyLanding() {
       <footer className="w-full py-8 bg-gray-900 text-gray-300">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-center">
-            <p className="text-sm text-gray-400">© 2025 Streak Buddy. Building better habits, together.</p>
+            <p className="text-sm text-gray-400">Made by Jonathan Nguyen</p>
             {/* <div className="flex gap-6">
               <Link href="#" className="text-sm hover:text-white transition-colors">
                 Privacy
