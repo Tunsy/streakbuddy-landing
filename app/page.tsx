@@ -64,24 +64,24 @@ export default function StreakBuddyLanding() {
 
         {/* Pain Section */}
         <section id="how-it-works" className="w-full py-16 md:py-24 bg-white">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-8">
-                <div className="space-y-4">
-                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Tired of habit apps that don't work?</h2>
-                  <p className="text-lg text-gray-600">
-                    It's not your fault. Most productivity solutions weren't built for ADHD. Typical apps assume self-motivation is enough, leaving you to battle dopamine depletion alone, caushing you to: 
+          <div className="container mx-auto justify-center px-4 md:px-6">
+            <div className="grid gap-12 items-center">
+              <div className="space-y-8 justify-center mx-auto">
+                <div className="space-y-4 max-w-5xl">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900 text-center">Tired of habit apps that don't work?</h2>
+                  <p className="text-lg text-gray-600 text-center">
+                    It's not your fault. Most productivity solutions weren't built for ADHD. Typical apps assume self-motivation is enough, leaving you to battle dopamine depletion alone, causing you to: 
                   </p>
                 </div>
 
-                <div className="space-y-6">
+                <div className="grid max-w-2xl md:grid-cols-2 gap-x-24 gap-y-8 mb-10  pt-8 mx-auto">
                   <div className="flex items-start gap-4">
                     <div className="w-16 h-16 rounded-2xl flex items-center justify-center">
                       <span className="text-2xl">🤦‍♂️</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Forget</h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 w-72">
                         With so much going through your mind, things fall through the cracks.
                       </p>
                     </div>
@@ -89,11 +89,11 @@ export default function StreakBuddyLanding() {
 
                   <div className="flex items-start gap-4">
                     <div className="w-16 h-16 rounded-2xl flex items-center justify-center">
-                      <span className="text-2xl">😵‍💫</span>
+                      <span className="text-2xl">😵</span>
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Feel Overwhelmed</h3>
-                      <p className="text-gray-600">
+                      <p className="text-gray-600 w-72">
                         When your to-do list swirls into chaos and you're drowning in good intentions.
                       </p>
                     </div>
@@ -104,27 +104,38 @@ export default function StreakBuddyLanding() {
                       <span className="text-2xl">😔</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">And Lose Motivation</h3>
-                      <p className="text-gray-600">
+                      <h3 className="font-semibold text-gray-900 mb-1">Lose Motivation</h3>
+                      <p className="text-gray-600 w-72">
                         We all relate to having so much initial excitement in the beginning, and then fizzling out.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center">
+                      <span className="text-2xl">😵‍💫</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Be frustrated</h3>
+                      <p className="text-gray-600 w-72">
+                        Too many functions and a confusing UI leave you feeling frustrated.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div className="relative">
-                <div className="bg-gradient-to-r from-purple-400 to-pink-400 rounded-3xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                  <Image
-                    src="/placeholder.svg?height=400&width=300"
-                    width={300}
-                    height={400}
-                    alt="Streak Buddy App Interface"
-                    className="rounded-2xl shadow-2xl mx-auto"
-                  />
-                </div>
-              </div>
             </div>
+          </div>
+        </section>
+
+        <section className="w-full py-16 md:py-24 bg-gradient-to-br from-purple-300 to-pink-300">
+          <div className="container mx-auto px-4 md:px-6">
+            <h2 className="text-5xl font-semibold text-gray-900 mb-2 text-center">
+              You don’t have to do it alone.
+            </h2>
+            <p className="text-5xl text-gray-900 text-center">
+              Imagine what you could do if every habit had a buddy cheering you on.
+            </p>
           </div>
         </section>
 
@@ -133,7 +144,7 @@ export default function StreakBuddyLanding() {
           <div className="container mx-auto px-4 md:px-6">
             <div className="text-center space-y-4 mb-16">
               <h3 className="text-2xl font-bold text-gray-900">Introducing</h3>
-              <h1 className="inline-block text-5xl pb-4 font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Streak Buddy</h1>
+              <h1 className="inline-block text-7xl pb-4 font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Streak Buddy</h1>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Streak Buddy pairs you with a friend who shares your goal. When you both succeed, your streak grows. When one stumbles, you're there for each other.
               </p>
@@ -288,8 +299,7 @@ export default function StreakBuddyLanding() {
                   Ready to Build Habits That Actually Stick?
                 </h2>
                 <p className="text-lg text-purple-100">
-                  Join our waitlist and be the first to know when Streak Buddy launches. Plus, get exclusive early
-                  access and special launch pricing.
+                  Join our waitlist and be the first to know when Streak Buddy launches.
                 </p>
               </div>
 
@@ -305,7 +315,7 @@ export default function StreakBuddyLanding() {
                       type="submit"
                       className="w-full bg-white text-purple-600 hover:bg-purple-50 font-semibold py-3 shadow-lg hover:shadow-xl transition-all duration-300"
                     >
-                      Get Early Access
+                      Join Our Waitlist
                     </Button>
                   </form>
                   <p className="text-xs text-purple-200 mt-4 text-center">
