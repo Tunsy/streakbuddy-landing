@@ -1,103 +1,349 @@
-import Image from "next/image";
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { Users, Target, Smartphone, Heart, Zap, Star, CalendarDays, ChartColumn } from "lucide-react"
+import Link from "next/link"
+import Image from "next/image"
 
-export default function Home() {
+export default function StreakBuddyLanding() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex flex-col min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
+      {/* Header */}
+      <header className="px-4 lg:px-6 h-16 flex items-center backdrop-blur-sm bg-white/80 sticky top-0 z-50 border-b border-purple-100">
+        <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+            <Zap className="h-5 w-5 text-white" />
+          </div>
+          <span className="text-xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+            Streak Buddy
+          </span>
         </div>
+        <nav className="ml-auto hidden md:flex gap-6">
+          <Link href="#features" className="text-sm font-medium hover:text-purple-600 transition-colors">
+            Features
+          </Link>
+          <Link href="#signup" className="text-sm font-medium hover:text-purple-600 transition-colors">
+            Join Our Waitlist
+          </Link>
+        </nav>
+      </header>
+
+      <main className="flex-1">
+        {/* Hero Section */}
+        <section className="w-full py-12 md:py-24 lg:py-32 relative overflow-hidden debugPurple">
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 via-pink-600/10 to-orange-600/10 debugPurple" />
+          <div className="container mx-auto px-4 md:px-6 relative debugPurple">
+            <div className="flex flex-col items-center space-y-8 text-center">
+              <div className="space-y-4 max-w-5xl">
+                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent animate-in slide-in-from-bottom-4 duration-1000">
+                  Finally, Build Habits That Stick
+                  <br />
+                  <span className="text-gray-900">With The Help of a Buddy</span>
+                </h1>
+                <p className="mx-auto max-w-2xl text-lg md:text-xl text-gray-600 animate-in slide-in-from-bottom-4 duration-1000 delay-200">
+                  Stay accountable, build streaks together, and turn daily tasks into shared victories. The
+                  habit-building app designed specifically for people with ADHD.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 animate-in slide-in-from-bottom-4 duration-1000 delay-400">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Early Access
+                </Button>
+              </div>
+              <div className="flex items-center gap-2 text-sm text-gray-500 animate-in slide-in-from-bottom-4 duration-1000 delay-600">
+                <Smartphone className="h-4 w-4" />
+                <span>Coming to iOS & Android</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Pain Section */}
+        <section id="how-it-works" className="w-full py-16 md:py-24 bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Tired of habit apps that don't work?</h2>
+                  <p className="text-lg text-gray-600">
+                    It's not your fault. Most productivity solutions weren't built for ADHD. Typical apps assume self-motivation is enough, leaving you to battle dopamine depletion alone, caushing you to: 
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center">
+                      <span className="text-2xl">🤦‍♂️</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Forget</h3>
+                      <p className="text-gray-600">
+                        With so much going through your mind, things fall through the cracks.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center">
+                      <span className="text-2xl">😵‍💫</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">Feel Overwhelmed</h3>
+                      <p className="text-gray-600">
+                        When your to-do list swirls into chaos and you're drowning in good intentions.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center">
+                      <span className="text-2xl">😔</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 mb-1">And Lose Motivation</h3>
+                      <p className="text-gray-600">
+                        We all relate to having so much initial excitement in the beginning, and then fizzling out.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="bg-gradient-to-r from-purple-400 to-pink-400 rounded-3xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+                  <Image
+                    src="/placeholder.svg?height=400&width=300"
+                    width={300}
+                    height={400}
+                    alt="Streak Buddy App Interface"
+                    className="rounded-2xl shadow-2xl mx-auto"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section id="features" className="w-full py-16 md:py-24 bg-gradient-to-br from-purple-50 to-pink-50">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center space-y-4 mb-16">
+              <h3 className="text-2xl font-bold text-gray-900">Introducing</h3>
+              <h1 className="inline-block text-5xl pb-4 font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Streak Buddy</h1>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Streak Buddy pairs you with a friend who shares your goal. When you both succeed, your streak grows. When one stumbles, you're there for each other.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+              <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-purple-100">
+                <CardContent className="p-8 text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-purple-500 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <Users className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Pair Up Easily</h3>
+                  <p className="text-gray-600">
+                    Invite your accountability buddy instantly. Connect with friends, family, or find a new buddy in our
+                    community.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-pink-100">
+                <CardContent className="p-8 text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500  rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <Target className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Pick Your Habit</h3>
+                  <p className="text-gray-600">
+                    Choose simple, achievable daily tasks. Start small and build momentum with ADHD-friendly habit
+                    suggestions.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-orange-100">
+                <CardContent className="p-8 text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-orange-500 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <CalendarDays className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Build a Streak Together</h3>
+                  <p className="text-gray-600">
+                    Complete tasks together to maintain your streak. Hold each other accountable and support each other
+                    through challenges.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border-orange-100">
+                <CardContent className="p-8 text-center space-y-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                    <ChartColumn className="h-8 w-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">Compare Stats</h3>
+                  <p className="text-gray-600">
+                    Compare your stats side-by-side to spark friendly competition and keep each other motivated.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+
+
+        {/* Social Proof Section */}
+        {/* <section className="w-full py-16 md:py-24 bg-white">
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="text-center space-y-4 mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Join the Community</h2>
+              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                Thousands of people with ADHD are already building better habits together.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <Card className="border-purple-100">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    "Finally, an app that gets how my ADHD brain works. The buddy system makes all the difference!"
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center">
+                      <span className="text-white font-semibold">S</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900">Sarah M.</p>
+                      <p className="text-sm text-gray-500">Beta Tester</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-pink-100">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    "I've tried every habit app out there. This is the first one that actually stuck with me."
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-pink-400 to-orange-400 rounded-full flex items-center justify-center">
+                      <span className="text-white font-semibold">M</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900">Mike R.</p>
+                      <p className="text-sm text-gray-500">Early Adopter</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <Card className="border-orange-100">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                    ))}
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    "The visual progress tracking and gentle reminders are perfect for my ADHD. Love it!"
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-orange-400 to-red-400 rounded-full flex items-center justify-center">
+                      <span className="text-white font-semibold">A</span>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900">Alex T.</p>
+                      <p className="text-sm text-gray-500">Community Member</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section> */}
+
+        {/* CTA Section */}
+        <section
+          id="signup"
+          className="w-full py-16 md:py-24 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600"
+        >
+          <div className="container mx-auto px-4 md:px-6">
+            <div className="max-w-3xl mx-auto text-center space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-3xl md:text-4xl font-bold text-white">
+                  Ready to Build Habits That Actually Stick?
+                </h2>
+                <p className="text-lg text-purple-100">
+                  Join our waitlist and be the first to know when Streak Buddy launches. Plus, get exclusive early
+                  access and special launch pricing.
+                </p>
+              </div>
+
+              <Card className="max-w-md mx-auto bg-white/10 backdrop-blur-sm border-white/20">
+                <CardContent className="p-6">
+                  <form className="space-y-4">
+                    <Input
+                      type="email"
+                      placeholder="Enter your email address"
+                      className="bg-white/20 border-white/30 text-white placeholder:text-purple-200 focus:bg-white/30"
+                    />
+                    <Button
+                      type="submit"
+                      className="w-full bg-white text-purple-600 hover:bg-purple-50 font-semibold py-3 shadow-lg hover:shadow-xl transition-all duration-300"
+                    >
+                      Get Early Access
+                    </Button>
+                  </form>
+                  <p className="text-xs text-purple-200 mt-4 text-center">
+                    Join 100+ people waiting for launch • Coming Soon
+                  </p>
+                </CardContent>
+              </Card>
+
+              <div className="flex items-center justify-center gap-8 text-purple-200">
+                <div className="flex items-center gap-2">
+                  <Smartphone className="h-5 w-5" />
+                  <span className="text-sm">iOS & Android</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+
+      {/* Footer */}
+      <footer className="w-full py-8 bg-gray-900 text-gray-300">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-center">
+            <p className="text-sm text-gray-400">© 2025 Streak Buddy. Building better habits, together.</p>
+            {/* <div className="flex gap-6">
+              <Link href="#" className="text-sm hover:text-white transition-colors">
+                Privacy
+              </Link>
+              <Link href="#" className="text-sm hover:text-white transition-colors">
+                Terms
+              </Link>
+              <Link href="#" className="text-sm hover:text-white transition-colors">
+                Contact
+              </Link>
+            </div> */}
+          </div>
+        </div>
       </footer>
     </div>
-  );
+  )
 }
