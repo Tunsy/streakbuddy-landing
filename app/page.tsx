@@ -100,7 +100,7 @@ export default function StreakBuddyLanding() {
                       <span className="text-4xl">😵</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">Feel Overwhelmed</h3>
+                      <h3 className="font-semibold text-gray-900 mb-1">Get Overwhelmed</h3>
                       <p className="text-gray-600 w-72">
                         {`When your to-do list swirls into chaos and you're drowning in good intentions.`}
                       </p>
@@ -124,7 +124,7 @@ export default function StreakBuddyLanding() {
                       <span className="text-4xl">😵‍💫</span>
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-1">Be Frustrated</h3>
+                      <h3 className="font-semibold text-gray-900 mb-1">Feel Frustrated</h3>
                       <p className="text-gray-600 w-72">
                         Too many functions and a confusing UI leave you feeling frustrated.
                       </p>
