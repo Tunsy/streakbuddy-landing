@@ -47,12 +47,15 @@ export default function StreakBuddyLanding() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 animate-in slide-in-from-bottom-4 duration-1000 delay-400">
-                <Button
-                  size="lg"
-                  className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-                >
-                  Get Early Access
-                </Button>
+                <Link href="#signup">
+                  <Button
+                    size="lg"
+                    className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                    
+                  >
+                    Get Early Access
+                  </Button>
+                </Link>
               </div>
               <div className="flex items-center gap-2 text-sm text-gray-500 animate-in slide-in-from-bottom-4 duration-1000 delay-600">
                 <Smartphone className="h-4 w-4" />
